@@ -63,7 +63,12 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-bold text-lg mb-2">Telefone</h3>
-              <p className="text-white/90">(17) 99195-3385</p>
+              <a 
+                href="tel:+5517991953385"
+                className="text-white/90 hover:text-white hover:underline transition-all"
+              >
+                (17) 99195-3385
+              </a>
             </div>
             <div>
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
