@@ -178,9 +178,24 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
-                    Detalhes do Pedido
+                  <label htmlFor="material" className="block text-sm font-medium text-gray-700 mb-1">
+                    Material
                   </label>
+                  <select
+                    id="material"
+                    name="material"
+                    value={formData.material}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all bg-white text-sm"
+                  >
+                    <option value="">Selecione...</option>
+                    {materialTypes.map((type) => (
+                      <option key={type.value} value={type.value}>{type.label}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
                   <textarea
                     id="description"
                     name="description"
@@ -188,7 +203,7 @@ export default function Contact() {
                     value={formData.description}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all resize-none text-sm"
-                    placeholder="Quantidade, dimensões, cores..."
+                    placeholder="Descreva seu pedido..."
                   />
                 </div>
 
