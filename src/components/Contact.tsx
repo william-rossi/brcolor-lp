@@ -46,8 +46,8 @@ export default function Contact() {
       `*Nome:* ${formData.name}\n` +
       `*Telefone:* ${formData.phone}\n` +
       `*Produto:* ${productLabel}\n` +
-      `*Material:* ${materialLabel}\n` +
-      `*Descrição:* ${formData.description || "Não informado"}`
+      `*Material:* ${materialLabel}` +
+      (formData.description ? `\n\n${formData.description}` : "")
     );
     
     window.open(`https://wa.me/5517991953385?text=${message}`, "_blank");
