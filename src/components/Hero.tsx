@@ -9,15 +9,18 @@ export default function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="text-center">
-          <div className="mb-8 flex justify-center">
-            <Image
-              src="/images/logos/brcolor-logo-large.png"
-              alt="BRColor Gráfica"
-              width={280}
-              height={100}
-              className="h-24 md:h-32 w-auto drop-shadow-lg"
-              priority
-            />
+          <div className="mb-6 flex justify-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full scale-150" />
+              <Image
+                src="/images/logos/brcolor-logo-large.png"
+                alt="BRColor Gráfica"
+                width={400}
+                height={150}
+                className="relative h-32 md:h-44 w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                priority
+              />
+            </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
             Fabricante de Rótulos e<br />Etiquetas Adesivas
