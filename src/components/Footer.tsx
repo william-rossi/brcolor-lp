@@ -50,6 +50,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Contato</h4>
             <p className="text-gray-400 text-sm">WhatsApp: (17) 99195-3385</p>
+            <p className="text-gray-400 text-sm mt-2">
+              <a href="mailto:graficabrcolor@gmail.com" className="hover:text-white transition-colors">
+                graficabrcolor@gmail.com
+              </a>
+            </p>
             <p className="text-gray-400 text-sm mt-2">São José do Rio Preto - SP</p>
           </div>
         </div>
