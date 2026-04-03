@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -9,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "BRColor Gráfica - Rótulos e Etiquetas Adesivas em São José do Rio Preto",
-  description: "Fabricante de rótulos e etiquetas adesivas em São José do Rio Preto. Pequenas e grandes tiragens, digital e flexografia. Etiquetas personalizadas, lacres de segurança, ribbons e mais!",
+  description: "Fabricante de rótulos e etiquetas adesivas em São José do Rio Preto. Pequenas e grandes tiragens, digital e flexografia. Etiquetas personalizadas, lacres de segurança, ribbons e mais! Mais de 5 anos no mercado com excelência.",
   keywords: ["rótulos", "etiquetas", "adesivas", "gráfica", "São José do Rio Preto", "flexografia", "digital", "lacres", "ribbons", "etiquetas personalizadas"],
   authors: [{ name: "BRColor Gráfica" }],
   creator: "BRColor Gráfica",
@@ -53,7 +55,11 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

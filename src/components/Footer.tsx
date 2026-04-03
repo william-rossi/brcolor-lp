@@ -55,7 +55,8 @@ export default function Footer() {
                 graficabrcolor@gmail.com
               </a>
             </p>
-            <p className="text-gray-400 text-sm mt-2">São José do Rio Preto - SP</p>
+            <p className="text-gray-400 text-sm mt-2">R. da Trindade, 520 - Vila Ideal</p>
+            <p className="text-gray-400 text-sm">São José do Rio Preto - SP, 15060-280</p>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center">

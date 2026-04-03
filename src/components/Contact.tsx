@@ -23,8 +23,6 @@ const materialTypes = [
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    phone: "",
     productType: "",
     material: "",
     description: "",
@@ -44,7 +42,6 @@ export default function Contact() {
     const message = encodeURIComponent(
       `*Novo Orçamento - BRColor*\n\n` +
       `*Nome:* ${formData.name}\n` +
-      `*Telefone:* ${formData.phone}\n` +
       `*Produto:* ${productLabel}\n` +
       `*Material:* ${materialLabel}` +
       (formData.description ? `\n\n${formData.description}` : "")
@@ -136,22 +133,6 @@ export default function Contact() {
                     onChange={handleInputChange}
                     className="w-full px-3 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all text-sm"
                     placeholder="Seu nome"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    WhatsApp *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all text-sm"
-                    placeholder="(17) 99999-9999"
                   />
                 </div>
 

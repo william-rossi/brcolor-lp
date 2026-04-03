@@ -67,6 +67,9 @@ export default function ProductsCarousel() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState("");
   const [lightboxTitle, setLightboxTitle] = useState("");
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [translateX, setTranslateX] = useState(0);
 
   const openLightbox = (image: string, title: string) => {
     setLightboxImage(image);
@@ -88,6 +91,31 @@ export default function ProductsCarousel() {
     setCurrentSlide((prev) => (prev - 1 + products.length) % products.length);
   };
 
+  const handleDragStart = (clientX: number) => {
+    setIsDragging(true);
+    setStartX(clientX);
+    setTranslateX(0);
+  };
+
+  const handleDragMove = (clientX: number) => {
+    if (!isDragging) return;
+    const diff = clientX - startX;
+    setTranslateX(diff);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    
+    const threshold = 50;
+    if (translateX > threshold) {
+      prevSlide();
+    } else if (translateX < -threshold) {
+      nextSlide();
+    }
+    setTranslateX(0);
+  };
+
   return (
     <section id="produtos" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,7 +129,16 @@ export default function ProductsCarousel() {
         </div>
 
         <div className="relative max-w-5xl mx-auto">
-          <div className="overflow-hidden rounded-xl border border-gray-200">
+          <div 
+            className="overflow-hidden rounded-xl border border-gray-200 touch-pan-y select-none"
+            onMouseDown={(e) => handleDragStart(e.clientX)}
+            onMouseMove={(e) => handleDragMove(e.clientX)}
+            onMouseUp={handleDragEnd}
+            onMouseLeave={handleDragEnd}
+            onTouchStart={(e) => handleDragStart(e.touches[0].clientX)}
+            onTouchMove={(e) => handleDragMove(e.touches[0].clientX)}
+            onTouchEnd={handleDragEnd}
+          >
             <div className="flex transition-transform duration-500 ease-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
               {products.map((product) => (
                 <div key={product.id} className="w-full flex-shrink-0">

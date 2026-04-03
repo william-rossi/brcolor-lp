@@ -1,61 +1,53 @@
 "use client";
 
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import ProductsCarousel from "@/components/ProductsCarousel";
 import MaterialsSection from "@/components/MaterialsSection";
 import Segments from "@/components/Segments";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/images/logos/brcolor-logo-large.png"
-              alt="BRColor Gráfica"
-              width={150}
-              height={50}
-              className="h-12 w-auto"
-              priority
-            />
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#produtos" className="text-gray-700 hover:text-[var(--primary)] transition-colors font-medium">
-              Produtos
-            </a>
-            <a href="#materiais" className="text-gray-700 hover:text-[var(--primary)] transition-colors font-medium">
-              Materiais
-            </a>
-            <a href="#contato" className="text-gray-700 hover:text-[var(--primary)] transition-colors font-medium">
-              Contato
-            </a>
-          </nav>
-          <a
-            href="https://wa.me/5517991953385"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="gradient-primary text-white px-5 py-2.5 rounded-full font-medium hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/25"
-          >
-            WhatsApp
-          </a>
-        </div>
-      </header>
-
       <Hero />
       <ProductsCarousel />
       <MaterialsSection />
       <Segments />
+
+      {/* Quem Somos - Seção Resumida */}
+      <section id="quem-somos" className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
+            Quem Somos
+          </h2>
+          <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+            A BRColor Gráfica é uma empresa especializada na fabricação de rótulos e etiquetas adesivas, 
+            com mais de 5 anos no mercado atuando em São José do Rio Preto e região com excelência e comprometimento.
+          </p>
+          <p className="text-gray-600 mb-8 leading-relaxed">
+            Nossa missão é fornecer soluções personalizadas em etiquetas para empresas de todos os 
+            segmentos, desde pequenos empreendedores até grandes indústrias.
+          </p>
+          <a 
+            href="/quem-somos"
+            className="inline-block gradient-primary text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition-opacity shadow-lg"
+          >
+            Conheça Nossa História
+          </a>
+        </div>
+      </section>
+
       <Contact />
 
       {/* Info Bar */}
       <section className="gradient-primary py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 text-center text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div>
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,14 +71,14 @@ export default function Home() {
               </div>
               <h3 className="font-bold text-lg mb-2">Endereço</h3>
               <a 
-                href="https://maps.google.com/?q=Rua+Pará,+590+-+Vila+Ipiranga,+São+José+do+Rio+Preto+-+SP,+15055-050"
+                href="https://maps.google.com/?q=R.+da+Trindade,+520+-+Vila+Ideal,+São+José+do+Rio+Preto+-+SP,+15060-280"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/90 hover:text-white hover:underline transition-all block"
               >
-                Rua Pará, 590 - Vila Ipiranga
+                R. da Trindade, 520 - Vila Ideal
               </a>
-              <p className="text-white/80 text-sm">São José do Rio Preto - SP</p>
+              <p className="text-white/80 text-sm">São José do Rio Preto - SP, 15060-280</p>
             </div>
             <div>
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -98,11 +90,23 @@ export default function Home() {
               <p className="text-white/90">Segunda a Sexta</p>
               <p className="text-white/80 text-sm">07:30–12:00, 13:30–18:00</p>
             </div>
+            <div>
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-lg mb-2">Quem Somos</h3>
+              <a 
+                href="/quem-somos"
+                className="text-white/90 hover:text-white hover:underline transition-all"
+              >
+                Conheça nossa história
+              </a>
+            </div>
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
