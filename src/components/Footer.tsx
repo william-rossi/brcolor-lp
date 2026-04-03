@@ -13,7 +13,7 @@ export default function Footer() {
               alt="BRColor Gráfica"
               width={180}
               height={60}
-              className="h-12 w-auto mb-4 brightness-200"
+              className="h-12 w-auto mb-4"
             />
             <p className="text-gray-400 mb-4 max-w-md">
               Fabricante de rótulos e etiquetas adesivas em São José do Rio Preto. 

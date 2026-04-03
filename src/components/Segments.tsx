@@ -22,13 +22,13 @@ export default function Segments() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
           {segments.map((segment, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 text-center">
-              <div className={`w-12 h-12 ${segment.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
-                <segment.icon className="w-6 h-6" />
+            <div key={idx} className="bg-white rounded-xl p-3 md:p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 text-center">
+              <div className={`w-10 h-10 md:w-12 md:h-12 ${segment.color} rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3`}>
+                <segment.icon className="w-5 h-5 md:w-6 md:h-6" />
               </div>
-              <h3 className="font-bold text-gray-800 text-sm">{segment.name}</h3>
+              <h3 className="font-bold text-gray-800 text-xs md:text-sm leading-tight">{segment.name}</h3>
             </div>
           ))}
         </div>

@@ -36,11 +36,11 @@ export default function MaterialsSection() {
               </span>
               Tipos de Material
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               {materials.map((material, idx) => (
-                <div key={idx} className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
-                  <h4 className="font-bold text-[var(--primary)] mb-1">{material.name}</h4>
-                  <p className="text-sm text-gray-600">{material.description}</p>
+                <div key={idx} className="p-4 md:p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
+                  <h4 className="font-bold text-[var(--primary)] mb-1 text-sm md:text-base">{material.name}</h4>
+                  <p className="text-xs md:text-sm text-gray-600">{material.description}</p>
                 </div>
               ))}
             </div>
@@ -56,11 +56,11 @@ export default function MaterialsSection() {
               </span>
               Acabamentos
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               {finishes.map((finish, idx) => (
-                <div key={idx} className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl border border-emerald-100">
-                  <h4 className="font-bold text-[var(--secondary)] mb-1">{finish.name}</h4>
-                  <p className="text-sm text-gray-600">{finish.description}</p>
+                <div key={idx} className="p-4 md:p-5 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl border border-emerald-100">
+                  <h4 className="font-bold text-[var(--secondary)] mb-1 text-sm md:text-base">{finish.name}</h4>
+                  <p className="text-xs md:text-sm text-gray-600">{finish.description}</p>
                 </div>
               ))}
             </div>

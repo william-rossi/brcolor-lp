@@ -64,6 +64,21 @@ const products = [
 
 export default function ProductsCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState("");
+  const [lightboxTitle, setLightboxTitle] = useState("");
+
+  const openLightbox = (image: string, title: string) => {
+    setLightboxImage(image);
+    setLightboxTitle(title);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    setLightboxImage("");
+    setLightboxTitle("");
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % products.length);
@@ -91,7 +106,10 @@ export default function ProductsCarousel() {
               {products.map((product) => (
                 <div key={product.id} className="w-full flex-shrink-0">
                   <div className="grid md:grid-cols-2 gap-0">
-                    <div className="relative h-56 md:h-80 bg-gray-50">
+                    <div 
+                      className="relative h-56 md:h-80 bg-gray-50 cursor-pointer"
+                      onClick={() => openLightbox(product.image, product.title)}
+                    >
                       <Image
                         src={product.image}
                         alt={product.title}
@@ -99,7 +117,7 @@ export default function ProductsCarousel() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="p-6 md:p-10 flex flex-col justify-center bg-white">
+                    <div className="px-12 py-6 md:p-10 flex flex-col justify-center bg-white">
                       <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                         {product.title}
                       </h3>
@@ -154,6 +172,34 @@ export default function ProductsCarousel() {
           </div>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+          onClick={closeLightbox}
+        >
+          <div className="relative max-w-5xl max-h-[90vh] w-full">
+            <button
+              onClick={closeLightbox}
+              className="absolute -top-12 right-0 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+              aria-label="Fechar"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <Image
+              src={lightboxImage}
+              alt={lightboxTitle}
+              width={800}
+              height={600}
+              className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+              priority
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
