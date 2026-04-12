@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Image
               src="/images/logos/brcolor-logo-large.png"
-              alt="BRColor Gráfica"
+              alt="BR Color Gráfica"
               width={180}
               height={60}
               className="h-12 w-auto mb-4"
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} BRColor Gráfica. Todos os direitos reservados.
+            © {new Date().getFullYear()} BR Color Gráfica. Todos os direitos reservados.
           </p>
         </div>
       </div>

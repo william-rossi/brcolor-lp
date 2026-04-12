@@ -11,7 +11,7 @@ export default function QuemSomos() {
               Quem Somos
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Conheça a BRColor Gráfica, sua parceira em soluções de rótulos e etiquetas
+              Conheça a BR Color Gráfica, sua parceira em soluções de rótulos e etiquetas
             </p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function QuemSomos() {
                 Tradição e Qualidade
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                A BRColor Gráfica é uma empresa especializada na fabricação de rótulos e etiquetas adesivas, 
+                A BR Color Gráfica é uma empresa especializada na fabricação de rótulos e etiquetas adesivas, 
                 com mais de 5 anos no mercado atuando em São José do Rio Preto e região com excelência e comprometimento.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
@@ -43,7 +43,7 @@ export default function QuemSomos() {
             <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/company/company-1.jpg"
-                alt="Fachada BRColor Gráfica"
+                alt="Fachada BR Color Gráfica"
                 fill
                 className="object-cover"
               />
@@ -60,7 +60,7 @@ export default function QuemSomos() {
               Nossos Diferenciais
             </h2>
             <p className="text-xl text-gray-600">
-              Por que escolher a BRColor Gráfica?
+              Por que escolher a BR Color Gráfica?
             </p>
           </div>
 

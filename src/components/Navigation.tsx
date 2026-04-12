@@ -14,7 +14,7 @@ export default function Navigation() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/logos/brcolor-logo-large.png"
-            alt="BRColor Gráfica"
+            alt="BR Color Gráfica"
             width={150}
             height={50}
             className="h-12 w-auto"

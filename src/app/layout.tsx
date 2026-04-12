@@ -10,12 +10,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BRColor Gráfica - Rótulos e Etiquetas Adesivas em São José do Rio Preto",
+  title: "BR Color Gráfica - Rótulos e Etiquetas Adesivas em São José do Rio Preto",
   description: "Fabricante de rótulos e etiquetas adesivas em São José do Rio Preto. Pequenas e grandes tiragens, digital e flexografia. Etiquetas personalizadas, lacres de segurança, ribbons e mais! Mais de 5 anos no mercado com excelência.",
   keywords: ["rótulos", "etiquetas", "adesivas", "gráfica", "São José do Rio Preto", "flexografia", "digital", "lacres", "ribbons", "etiquetas personalizadas"],
-  authors: [{ name: "BRColor Gráfica" }],
-  creator: "BRColor Gráfica",
-  publisher: "BRColor Gráfica",
+  authors: [{ name: "BR Color Gráfica" }],
+  creator: "BR Color Gráfica",
+  publisher: "BR Color Gráfica",
   robots: {
     index: true,
     follow: true,
@@ -28,16 +28,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "BRColor Gráfica - Rótulos e Etiquetas Adesivas",
+    title: "BR Color Gráfica - Rótulos e Etiquetas Adesivas",
     description: "Fabricante de rótulos e etiquetas adesivas. Pequenas e grandes tiragens, digital e flexografia.",
     url: "https://brcolorgrafica.com.br",
-    siteName: "BRColor Gráfica",
+    siteName: "BR Color Gráfica",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BRColor Gráfica - Rótulos e Etiquetas Adesivas",
+    title: "BR Color Gráfica - Rótulos e Etiquetas Adesivas",
     description: "Fabricante de rótulos e etiquetas adesivas em São José do Rio Preto",
   },
   alternates: {

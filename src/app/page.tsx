@@ -26,7 +26,7 @@ export default function Home() {
             Quem Somos
           </h2>
           <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-            A BRColor Gráfica é uma empresa especializada na fabricação de rótulos e etiquetas adesivas, 
+            A BR Color Gráfica é uma empresa especializada na fabricação de rótulos e etiquetas adesivas, 
             com mais de 5 anos no mercado atuando em São José do Rio Preto e região com excelência e comprometimento.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">

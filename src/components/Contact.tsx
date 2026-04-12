@@ -40,7 +40,7 @@ export default function Contact() {
     const materialLabel = materialTypes.find(m => m.value === formData.material)?.label || formData.material || "Não informado";
     
     const message = encodeURIComponent(
-      `*Novo Orçamento - BRColor*\n\n` +
+      `*Novo Orçamento - BR Color*\n\n` +
       `*Nome:* ${formData.name}\n` +
       `*Produto:* ${productLabel}\n` +
       `*Material:* ${materialLabel}` +
